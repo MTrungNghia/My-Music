@@ -102,7 +102,7 @@ const app = {
                 <p class="author">${song.singer}</p>
                 </div>
                 <div class="option">
-                <i class="fas fa-ellipsis-h"></i>
+                <i class="fas fa-ellipsis-h" href = "favicon/favicon.ico"></i>
                 </div>
             </div>
             `
@@ -290,9 +290,10 @@ const app = {
 
                     //xu ly khi click vao song option
                     if(e.target.closest('.option')) {
-                        
+                        console.log("hihi")
                     }
                 }
+                
             }
         
     },
@@ -305,7 +306,6 @@ const app = {
         }, 300)
     },
     loadCurrentSong:function() {
-
         heading.textContent = this.currentSong.name;
         cdThumb.style.backgroundImage = `url('${this.currentSong.image}')`;
         audio.src = this.currentSong.path;
